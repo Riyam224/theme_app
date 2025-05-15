@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: Text("Food App"),
+        title: const Text("theme and more "),
         centerTitle: false,
         actions: [
           IconButton(
@@ -20,11 +20,12 @@ class HomeScreen extends StatelessWidget {
               Icons.dark_mode,
               color: Theme.of(context).iconTheme.color,
             ),
-            onPressed: Provider.of<ThemeProvider>(context).toggleTheme,
+            onPressed:
+                Provider.of<ThemeProvider>(context, listen: false).toggleTheme,
           ),
         ],
       ),
-      body: Center(child: Text("Welcome")),
+      body: Center(child: Text('main screen ')),
     );
   }
 }
